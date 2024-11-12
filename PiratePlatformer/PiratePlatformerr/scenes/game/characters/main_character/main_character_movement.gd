@@ -13,8 +13,8 @@ extends Node2D
 @onready var _collision := $"../AreaSword/CollisionShape2D" # Colicionador de espada
 @onready var _effect_sword := $"../EffectsSword" # Efectos de espada
 
-var gravity = 650 # Gravedad para el personaje
-var velocity = 100 # Velocidad de movimiento en horizontal
+var gravity = 622 # Gravedad para el personaje
+var velocity = 120 # Velocidad de movimiento en horizontal
 var jump = 220 # Capacidad de salto, entre mayor el número más se puede saltar
 # Mapa de movimientos del personaje
 var _movements = {
