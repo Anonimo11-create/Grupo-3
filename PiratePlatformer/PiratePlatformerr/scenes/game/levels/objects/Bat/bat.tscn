@@ -1,0 +1,199 @@
+[gd_scene load_steps=42 format=3 uid="uid://bbi5eyjswsu0q"]
+
+[ext_resource type="Script" path="res://scenes/game/levels/objects/Bat/bat.gd" id="1_cdqtr"]
+[ext_resource type="Texture2D" uid="uid://cgdupoel3htif" path="res://assets/sprites/treasure_hunters/pirate_treasure/sprites/Bat_moves/Fly/1.png" id="1_p7sit"]
+[ext_resource type="Texture2D" uid="uid://ccgd56d6d5kh0" path="res://assets/sprites/treasure_hunters/pirate_treasure/sprites/Bat_moves/Ceiling in (regreso)/1.png" id="2_kqh1u"]
+[ext_resource type="Texture2D" uid="uid://dfxkpuemwxu7q" path="res://assets/sprites/treasure_hunters/pirate_treasure/sprites/Bat_moves/Fly/2.png" id="2_pnbcx"]
+[ext_resource type="Texture2D" uid="uid://c7npvsswlqji0" path="res://assets/sprites/treasure_hunters/pirate_treasure/sprites/Bat_moves/Ceiling in (regreso)/2.png" id="3_35l33"]
+[ext_resource type="Texture2D" uid="uid://ct7m8tre7xbhp" path="res://assets/sprites/treasure_hunters/pirate_treasure/sprites/Bat_moves/Fly/3.png" id="3_kgqb7"]
+[ext_resource type="Texture2D" uid="uid://bhnv4m1qqf4me" path="res://assets/sprites/treasure_hunters/pirate_treasure/sprites/Bat_moves/Fly/4.png" id="4_kwv7s"]
+[ext_resource type="Texture2D" uid="uid://clyg3xen8cvvc" path="res://assets/sprites/treasure_hunters/pirate_treasure/sprites/Bat_moves/Ceiling in (regreso)/3.png" id="4_wsn74"]
+[ext_resource type="Texture2D" uid="uid://cf4bei2bytg57" path="res://assets/sprites/treasure_hunters/pirate_treasure/sprites/Bat_moves/Fly/5.png" id="5_7ihjh"]
+[ext_resource type="Texture2D" uid="uid://dxpedekg86cbc" path="res://assets/sprites/treasure_hunters/pirate_treasure/sprites/Bat_moves/Ceiling in (regreso)/4.png" id="5_143qv"]
+[ext_resource type="Texture2D" uid="uid://udkai381wr51" path="res://assets/sprites/treasure_hunters/pirate_treasure/sprites/Bat_moves/Ceiling in (regreso)/5.png" id="6_1pkap"]
+[ext_resource type="Texture2D" uid="uid://bm25ybafui5wq" path="res://assets/sprites/treasure_hunters/pirate_treasure/sprites/Bat_moves/Fly/6.png" id="6_qmrp7"]
+[ext_resource type="Texture2D" uid="uid://caw28ve4uxo1x" path="res://assets/sprites/treasure_hunters/pirate_treasure/sprites/Bat_moves/Fly/7.png" id="7_c5sws"]
+[ext_resource type="Texture2D" uid="uid://b26w8cpswwm2l" path="res://assets/sprites/treasure_hunters/pirate_treasure/sprites/Bat_moves/Ceiling in (regreso)/6.png" id="7_mu5cn"]
+[ext_resource type="Texture2D" uid="uid://m00fbmr4qb5u" path="res://assets/sprites/treasure_hunters/pirate_treasure/sprites/Bat_moves/Ceiling in (regreso)/7.png" id="8_ad3xt"]
+[ext_resource type="Texture2D" uid="uid://bd8y0bufui5or" path="res://assets/sprites/treasure_hunters/pirate_treasure/sprites/Bat_moves/ceiling out (salida)/1.png" id="9_o1fif"]
+[ext_resource type="Texture2D" uid="uid://bpa7gf2vqv6mp" path="res://assets/sprites/treasure_hunters/pirate_treasure/sprites/Bat_moves/ceiling out (salida)/2.png" id="10_hgs86"]
+[ext_resource type="Texture2D" uid="uid://bd20mxv7l68xt" path="res://assets/sprites/treasure_hunters/pirate_treasure/sprites/Bat_moves/ceiling out (salida)/3.png" id="11_6urks"]
+[ext_resource type="Texture2D" uid="uid://cc7d4bomx8bh2" path="res://assets/sprites/treasure_hunters/pirate_treasure/sprites/Bat_moves/ceiling out (salida)/4.png" id="12_ap1xs"]
+[ext_resource type="Texture2D" uid="uid://cn8leh054dvft" path="res://assets/sprites/treasure_hunters/pirate_treasure/sprites/Bat_moves/ceiling out (salida)/5.png" id="13_0iygq"]
+[ext_resource type="Texture2D" uid="uid://qq6qvbpgfan2" path="res://assets/sprites/treasure_hunters/pirate_treasure/sprites/Bat_moves/ceiling out (salida)/6.png" id="14_g3hpe"]
+[ext_resource type="Texture2D" uid="uid://cl631uu584s11" path="res://assets/sprites/treasure_hunters/pirate_treasure/sprites/Bat_moves/ceiling out (salida)/7.png" id="15_kavlg"]
+[ext_resource type="Texture2D" uid="uid://rbpt4nw16bp6" path="res://assets/sprites/treasure_hunters/pirate_treasure/sprites/Bat_moves/Hit/1.png" id="23_1wspq"]
+[ext_resource type="Texture2D" uid="uid://dvqjav12lffbh" path="res://assets/sprites/treasure_hunters/pirate_treasure/sprites/Bat_moves/Hit/2.png" id="24_ddddl"]
+[ext_resource type="Texture2D" uid="uid://bwhit1pb843l3" path="res://assets/sprites/treasure_hunters/pirate_treasure/sprites/Bat_moves/Hit/3.png" id="25_liy6p"]
+[ext_resource type="Texture2D" uid="uid://dnvkghclfjx0s" path="res://assets/sprites/treasure_hunters/pirate_treasure/sprites/Bat_moves/Hit/4.png" id="26_xrdr7"]
+[ext_resource type="Texture2D" uid="uid://dr7rjs2ynv1ex" path="res://assets/sprites/treasure_hunters/pirate_treasure/sprites/Bat_moves/Hit/5.png" id="27_u0vwu"]
+[ext_resource type="Texture2D" uid="uid://b8noacrv00uee" path="res://assets/sprites/treasure_hunters/pirate_treasure/sprites/Bat_moves/Idle/1.png" id="28_xsy2p"]
+[ext_resource type="Texture2D" uid="uid://c7hjfdlpiogqv" path="res://assets/sprites/treasure_hunters/pirate_treasure/sprites/Bat_moves/Idle/2.png" id="29_s4diw"]
+[ext_resource type="Texture2D" uid="uid://byy5aygrl84ne" path="res://assets/sprites/treasure_hunters/pirate_treasure/sprites/Bat_moves/Idle/3.png" id="30_a2poy"]
+[ext_resource type="Texture2D" uid="uid://2c7432v1g3c6" path="res://assets/sprites/treasure_hunters/pirate_treasure/sprites/Bat_moves/Idle/4.png" id="31_3vxk0"]
+[ext_resource type="Texture2D" uid="uid://bvfxngftr6hek" path="res://assets/sprites/treasure_hunters/pirate_treasure/sprites/Bat_moves/Idle/5.png" id="32_gy6ya"]
+[ext_resource type="Texture2D" uid="uid://cxmv5mawy3lyb" path="res://assets/sprites/treasure_hunters/pirate_treasure/sprites/Bat_moves/Idle/6.png" id="33_mtqc4"]
+[ext_resource type="Texture2D" uid="uid://c4pdd3biy4hol" path="res://assets/sprites/treasure_hunters/pirate_treasure/sprites/Bat_moves/Idle/7.png" id="34_gctw5"]
+[ext_resource type="Texture2D" uid="uid://ih7giq21hdr7" path="res://assets/sprites/treasure_hunters/pirate_treasure/sprites/Bat_moves/Idle/8.png" id="35_ykhat"]
+[ext_resource type="Texture2D" uid="uid://bggx40lmmiltl" path="res://assets/sprites/treasure_hunters/pirate_treasure/sprites/Bat_moves/Idle/9.png" id="36_1ar3s"]
+[ext_resource type="Texture2D" uid="uid://b1sf1kvg50tsp" path="res://assets/sprites/treasure_hunters/pirate_treasure/sprites/Bat_moves/Idle/10.png" id="37_6nn3l"]
+[ext_resource type="Texture2D" uid="uid://hdd8aushy7dd" path="res://assets/sprites/treasure_hunters/pirate_treasure/sprites/Bat_moves/Idle/11.png" id="38_5i3yu"]
+[ext_resource type="Texture2D" uid="uid://5fjeyh056uf4" path="res://assets/sprites/treasure_hunters/pirate_treasure/sprites/Bat_moves/Idle/12.png" id="39_mhlr0"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vj0rr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_kqh1u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_35l33")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_wsn74")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_143qv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_1pkap")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_mu5cn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ad3xt")
+}],
+"loop": true,
+"name": &"Ceiling In",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_o1fif")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_hgs86")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_6urks")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_ap1xs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_0iygq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_g3hpe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_kavlg")
+}],
+"loop": true,
+"name": &"Ceiling Out",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_p7sit")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_pnbcx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_kgqb7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_kwv7s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_7ihjh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_qmrp7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_c5sws")
+}],
+"loop": true,
+"name": &"Fly",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("23_1wspq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_ddddl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_liy6p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_xrdr7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_u0vwu")
+}],
+"loop": true,
+"name": &"Hit",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("28_xsy2p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_s4diw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_a2poy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_3vxk0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_gy6ya")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_mtqc4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_gctw5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_ykhat")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_1ar3s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_6nn3l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_5i3yu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_mhlr0")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3okvy"]
+size = Vector2(42, 24)
+
+[node name="Bat" type="Node2D"]
+script = ExtResource("1_cdqtr")
+
+[node name="movility" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_vj0rr")
+animation = &"Ceiling In"
+
+[node name="Area" type="Area2D" parent="."]
+
+[node name="CollisionShape" type="CollisionShape2D" parent="Area"]
+position = Vector2(1, -2)
+shape = SubResource("RectangleShape2D_3okvy")

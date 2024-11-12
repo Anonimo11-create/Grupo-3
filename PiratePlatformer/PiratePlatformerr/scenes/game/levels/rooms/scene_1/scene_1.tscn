@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://dhor7t5klwdwx"]
+[gd_scene load_steps=26 format=3 uid="uid://dhor7t5klwdwx"]
 
 [ext_resource type="TileSet" uid="uid://bx1rsqucrwm2i" path="res://assets/resources/bg_tile_set.tres" id="1_0t8t3"]
 [ext_resource type="PackedScene" uid="uid://8rbt5lmdrp0s" path="res://scenes/game/camera/camera.tscn" id="1_8l71v"]
@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://c2nps502udtd6" path="res://scenes/game/levels/objects/front_palm_tree/front_palm_tree.tscn" id="14_uwyh7"]
 [ext_resource type="PackedScene" uid="uid://ca3ueo0yewjov" path="res://scenes/game/characters/main_character/main_character.tscn" id="15_ooixx"]
 [ext_resource type="PackedScene" uid="uid://deedu63sld0es" path="res://scenes/game/levels/objects/death/death.tscn" id="16_kwprd"]
+[ext_resource type="PackedScene" uid="uid://d08vcfyoym2df" path="res://scenes/game/levels/objects/JumpPotion/jump_potion.tscn" id="17_6y1xf"]
 [ext_resource type="PackedScene" uid="uid://brhmupxo2xjim" path="res://scenes/game/levels/objects/change_scene/door_change_scene.tscn" id="17_ydyba"]
 [ext_resource type="PackedScene" uid="uid://bo37g7mv4j6pn" path="res://scenes/game/enemy/crabby.tscn" id="18_dyrn2"]
 [ext_resource type="PackedScene" uid="uid://c2e1lhm1w4re4" path="res://scenes/game/levels/objects/damage_object/spikes/spikes.tscn" id="19_4ldx5"]
@@ -36,6 +37,7 @@ autoplay = true
 bus = &"Ambient"
 
 [node name="Background" type="Sprite2D" parent="."]
+z_index = -1
 position = Vector2(765, 391.5)
 scale = Vector2(4.02083, 2.42969)
 texture = ExtResource("1_xttku")
@@ -197,6 +199,9 @@ position = Vector2(1350, 437)
 
 [node name="RedPotion" parent="Collectibles" instance=ExtResource("20_1tp5l")]
 position = Vector2(416, 432)
+
+[node name="JumpPotion" parent="Collectibles" instance=ExtResource("17_6y1xf")]
+position = Vector2(203, 486)
 
 [node name="PickableObject10" parent="Collectibles" instance=ExtResource("20_juf85")]
 position = Vector2(459, 471)
