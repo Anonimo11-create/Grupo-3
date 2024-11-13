@@ -25,6 +25,7 @@ DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 InventoryCanvas="*res://scenes/game/inventory/canvas/inventory_canvas.tscn"
 CustomDialogue="*res://scenes/game/dialogues/manager/custom_dialogue.gd"
 Global="*res://scenes/game/global/global.gd"
+JumpGlobal="*res://scenes/game/levels/objects/JumpPotion/JumpGlobal.gd"
 
 [display]
 

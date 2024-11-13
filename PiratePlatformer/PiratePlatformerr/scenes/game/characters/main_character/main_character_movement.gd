@@ -31,7 +31,7 @@ var _movements = {
 }
 var _current_movement = _movements.IDLE # Variable de movimiento
 var _is_jumping = false # Indicamos que el personaje está saltando
-var _max_jumps = 2 # Máximo número de saltos
+var _max_jumps  # Máximo número de saltos
 var _jump_count = 0 # Contador de saltos realizados
 var _died = false # Define si esta vovo o muerto
 var attacking = false # Define si esta atacando
@@ -49,11 +49,13 @@ var _hit_sound = preload("res://assets/sounds/slash.mp3")
 
 # Función de inicialización
 func _ready():
+	_max_jumps =JumpGlobal.jump
 	main_animation.play(_current_movement)
 	# Si no hay un personaje, deshabilitamos la función: _physics_process
 	if not character:
 		set_physics_process(false)
-
+func _process(_delta):
+	_max_jumps =JumpGlobal.jump
 
 # Función de ejecución de físicas
 func _physics_process(_delta):
