@@ -528,7 +528,7 @@ script = SubResource("GDScript_6chrj")
 
 [node name="EnemyAnimation" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_fq7gh")
-animation = &"idle"
+animation = &"anticipation"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(2, 1.5)
