@@ -1,39 +1,83 @@
 extends CharacterBody2D
 
-var _speed=30
-var _gravity=10
-var _moving_left=true
-var _initial_position:Vector2
-# Called when the node enters the scene tree for the first time.
+var gravity = 10
+
+var speed:int
+var life:int = 2
+
+var izquierda:bool = true
+var angryState:bool = false
+
+
+var posInicial: Vector2 
+
 func _ready():
-	velocity.x = - _speed
-	_initial_position.x=position.x
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	_move_character(delta)
-
-func _move_character(_delta):
-	velocity.y += _gravity
 	$movility.play("Walk")
-	if position.x <=_initial_position.x-100:
-		$IdleTimer.start()
-		$movility.play("Idle")
-		velocity.x=0
-		$movility.flip_h=true
-	elif position.x >= _initial_position.x+10:
-		$IdleTimer.start()
-		velocity.x=0
-		$movility.play("Idle")
-		$movility.flip_h=false
+	posInicial.x = position.x
+	speed=30
+	velocity.x = - speed
 
-	# Iniciamos el movimiento
+func _process(delta):
+	if life ==0 and angryState:
+		$movility.play("Hit 2")
+		speed = 0
+		angryState = false
+	elif life == 1:
+		angryState = true
+
+func _physics_process(delta):
+	velocity.y += gravity
+
+	if !angryState and life > 0:
+		walk()
+	else: 
+		angry(delta)
+
+func walk():
+	speed = 30
+	if izquierda and position.x <= posInicial.x - 150:
+		idle()
+		$movility.flip_h = true
+		$IdleTimer.start()
+		izquierda = false
+	elif !izquierda and position.x >= posInicial.x + 10: 
+		idle()
+		$movility.flip_h = false
+		$IdleTimer.start()
+		izquierda = true
+
 	move_and_slide()
+
+func angry(delta):
+	if angryState:
+		speed = 40
+		$movility.play("Run")
+		if position.x < Global.positionplayer.x:
+			$movility.flip_h = true
+			position.x += speed*delta
+		elif position.x > Global.positionplayer.x:
+			$movility.flip_h = false
+			position.x -= speed*delta
+
+func idle():
+	$movility.play("Idle")
+	velocity.x = 0
 
 
 func _on_idle_timer_timeout():
-	velocity.x=_speed
-	#if position.x <=_initial_position.x-100:
-		#velocity.x=_speed
-	#elif position.x >= _initial_position.x:
-		#velocity.x = - _speed
+	if izquierda:
+		$movility.play("Walk")
+		velocity.x = - speed
+	else:
+		$movility.play("Walk")
+		velocity.x =  speed
+
+
+func _on_hit_box_area_entered(area):
+	if area.is_in_group("hit"):
+		life -= 1
+
+#
+func _on_movility_frame_changed():
+	if $movility.get_animation() == "Hit 2" and $movility.frame == 6:
+		queue_free()

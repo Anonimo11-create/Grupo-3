@@ -50,7 +50,6 @@ var _has_hits = 0
 # La muerte del cangrejo
 var die = false
 
-
 # Función de inicialización
 func _ready():
 	# Seteamos la direccion de movimiento

@@ -56,6 +56,7 @@ func _ready():
 		set_physics_process(false)
 func _process(_delta):
 	_max_jumps =JumpGlobal.jump
+	Global.positionplayer = global_position
 
 # Función de ejecución de físicas
 func _physics_process(_delta):
