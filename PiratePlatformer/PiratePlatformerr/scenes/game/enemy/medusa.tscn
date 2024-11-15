@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://u7ljkv0x665l"]
+[gd_scene load_steps=30 format=3 uid="uid://u7ljkv0x665l"]
 
 [ext_resource type="Script" path="res://scenes/game/enemy/crabby.gd" id="1_dhx6e"]
 [ext_resource type="Texture2D" uid="uid://cfpmmp0en767l" path="res://assets/sprites/treasure_hunters/medusa invertida/Idle/Idle1.png" id="2_nyfuh"]
@@ -16,7 +16,6 @@
 [ext_resource type="Texture2D" uid="uid://cbt2bwt7evjxw" path="res://assets/sprites/treasure_hunters/medusa invertida/death/Death4.png" id="14_te75l"]
 [ext_resource type="Texture2D" uid="uid://bir6417vgplga" path="res://assets/sprites/treasure_hunters/medusa invertida/death/Death5.png" id="15_mcjjx"]
 [ext_resource type="Texture2D" uid="uid://b7vud28ayhbst" path="res://assets/sprites/treasure_hunters/medusa invertida/death/Death6.png" id="16_n45rr"]
-[ext_resource type="Texture2D" uid="uid://diy4hnc4w7vk1" path="res://assets/sprites/treasure_hunters/the_crusty_crew/sprites/crabby/04_fall/fall_01.png" id="17_smy4l"]
 [ext_resource type="Texture2D" uid="uid://bo18b5viq6444" path="res://assets/sprites/treasure_hunters/medusa invertida/hurt/Hurt1.png" id="17_ys1qh"]
 [ext_resource type="Texture2D" uid="uid://b0qn1o85e0liu" path="res://assets/sprites/treasure_hunters/medusa invertida/hurt/Hurt2.png" id="18_qwyg5"]
 [ext_resource type="Texture2D" uid="uid://dsv8mtjygddqk" path="res://assets/sprites/treasure_hunters/medusa invertida/walk/Walk1.png" id="23_f7bb0"]
@@ -98,14 +97,6 @@ animations = [{
 }],
 "loop": false,
 "name": &"dead_hit",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("17_smy4l")
-}],
-"loop": true,
-"name": &"fall",
 "speed": 5.0
 }, {
 "frames": [{
@@ -208,7 +199,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4dyqa"]
-size = Vector2(42, 25)
+size = Vector2(38, 21)
 
 [node name="Medusa" type="CharacterBody2D"]
 script = ExtResource("1_dhx6e")
@@ -217,8 +208,7 @@ script = ExtResource("1_dhx6e")
 position = Vector2(-3.5, -2.5)
 scale = Vector2(0.539063, 0.492188)
 sprite_frames = SubResource("SpriteFrames_dole7")
-animation = &"anticipation"
-frame_progress = 0.185118
+animation = &"attack"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(2, 1.5)
@@ -231,7 +221,7 @@ animation = &"idle"
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(2, 1.5)
+position = Vector2(0, 3.5)
 shape = SubResource("RectangleShape2D_4dyqa")
 one_way_collision_margin = 0.0
 
