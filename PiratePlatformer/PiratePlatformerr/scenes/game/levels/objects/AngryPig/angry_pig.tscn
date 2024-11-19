@@ -225,10 +225,10 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_phibb"]
-size = Vector2(33, 25)
+size = Vector2(31, 25)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oc2eb"]
-size = Vector2(29, 24)
+size = Vector2(33, 27)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8v0xk"]
 size = Vector2(189, 30)
@@ -240,19 +240,20 @@ script = ExtResource("1_tg0dv")
 position = Vector2(0, -1)
 scale = Vector2(1, 0.933333)
 sprite_frames = SubResource("SpriteFrames_tsygn")
-animation = &"Hit 2"
+animation = &"Idle"
 
 [node name="CollisionShape" type="CollisionShape2D" parent="."]
-position = Vector2(1.5, 0.5)
+position = Vector2(0.5, 0.5)
 shape = SubResource("RectangleShape2D_phibb")
 
 [node name="IdleTimer" type="Timer" parent="."]
 wait_time = 1.5
+one_shot = true
 
 [node name="HitBox" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
-position = Vector2(0.5, -1)
+position = Vector2(0.5, 0.5)
 shape = SubResource("RectangleShape2D_oc2eb")
 debug_color = Color(0.862745, 0.309804, 0.486275, 0.419608)
 
@@ -263,6 +264,13 @@ position = Vector2(4.5, 0)
 shape = SubResource("RectangleShape2D_8v0xk")
 debug_color = Color(0.560784, 0.419608, 0.94902, 0.419608)
 
+[node name="DmgTimer" type="Timer" parent="."]
+wait_time = 0.5
+
 [connection signal="frame_changed" from="movility" to="." method="_on_movility_frame_changed"]
-[connection signal="timeout" from="IdleTimer" to="." method="_on_idle_timer_timeout"]
 [connection signal="area_entered" from="HitBox" to="." method="_on_hit_box_area_entered"]
+[connection signal="body_entered" from="HitBox" to="." method="_on_hit_box_body_entered"]
+[connection signal="body_exited" from="HitBox" to="." method="_on_hit_box_body_exited"]
+[connection signal="body_entered" from="Area" to="." method="_on_area_body_entered"]
+[connection signal="body_exited" from="Area" to="." method="_on_area_body_exited"]
+[connection signal="timeout" from="DmgTimer" to="." method="_on_dmg_timer_timeout"]
